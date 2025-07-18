@@ -1,0 +1,107 @@
+@import url("./font.css");
+@import url("./animations.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Inter", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer base {
+  body,
+  .body {
+    @apply bg-titusDarkBG text-[#828C9B] tracking-wide overflow-x-hidden w-[100vw] min-h-screen;
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px grey; */
+    border-radius: 0px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #0c0c0c;
+    border-radius: 10px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+
+  p {
+    @apply font-light leading-[1.59rem] mb-5;
+  }
+
+  @media (max-width: 500px) {
+    input,
+    select,
+    .pass-field {
+      height: 50px;
+    }
+  }
+}
+
+.header {
+  box-shadow: 0px 3px 4px #f27938;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+input,
+select {
+  @apply rounded-xl py-3 px-2 bg-transparent border-[2px] border-dotted;
+}
+button {
+  @apply rounded-xl py-3 px-2 bg-[#f27938] text-black hover:bg-black hover:text-[#f27938] hover:border-2 hover:border-[#f27938] duration-300 ease-in;
+}
+
+.btnn1 {
+  @apply rounded-md bg-titusGreen text-black hover:scale-105 duration-300 ease-in;
+}
+.btnn-dark {
+  @apply rounded-md bg-[#222] text-white border-[1px] hover:border-titusGreen border-[#222];
+}
+.btnn-transparent {
+  @apply rounded-md bg-transparent text-white border-[1px] hover:border-white border-titusGreen;
+}
+
+/* ANIMATIONS */
+@keyframes rightBoxContainer {
+  0% {
+    transform: translateX(-10px);
+  }
+  10% {
+    transform: translateX(10px);
+  }
+  20% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes leftBoxContainer {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

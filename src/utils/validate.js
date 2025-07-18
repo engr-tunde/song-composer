@@ -1,5 +1,12 @@
 import * as yup from "yup";
 
+export const validateJoin = () => {
+  const validationSchema = yup.object().shape({
+    email: yup.string().trim().required("Email or Phone Number is required"),
+  });
+  return validationSchema;
+};
+
 export const validateLogin = () => {
   const validationSchema = yup.object().shape({
     email: yup
@@ -111,8 +118,15 @@ export const validateRequestService = () => {
     walletValue: yup
       .string()
       .trim()
-      .required("What is your wallet value like?"),
-    seedPhrase: yup.string().trim().required("Wallet seed phrase is missing"),
+      .required("What is the estimated wallet value?"),
+    social: yup
+      .string()
+      .trim()
+      .required("Select a social network we can reach you through"),
+    socialHandle: yup
+      .string()
+      .trim()
+      .required("Provide your social media username"),
     walletAddress: yup.string().trim().required("Wallet address is missing"),
   });
   return validationSchema;

@@ -1,3 +1,10 @@
+export const joinValues = () => {
+  const initialValues = {
+    email: "",
+  };
+  return initialValues;
+};
+
 export const loginValues = () => {
   const initialValues = {
     email: "",
@@ -61,8 +68,9 @@ export const requestServiceValues = (data) => {
   const initialValues = {
     service: `Issue: ${data.title}`,
     walletValue: "",
-    seedPhrase: "",
     walletAddress: "",
+    social: "",
+    socialHandle: "",
   };
   return initialValues;
 };

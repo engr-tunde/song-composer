@@ -1,0 +1,85 @@
+@keyframes dancingSlide {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(-20px);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateX(30px);
+  }
+  80% {
+    transform: translateY(30px);
+  }
+  0% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes leftRight {
+  0% {
+    transform: translateX(-10px);
+  }
+  10% {
+    transform: translateX(10px);
+  }
+  20% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes scaleItem {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: translateY(0.8);
+  }
+}
+@keyframes scaleBannerImg {
+  0% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+  100% {
+    transform: translateY(0.8);
+  }
+}
+
+.dancingSlide {
+  animation: dancingSlide 3s linear infinite;
+}
+.leftRight {
+  animation: leftRight 4s linear infinite;
+}
+.updown {
+  animation: updown 3s linear infinite;
+}
+.scaleItem {
+  animation: scaleItem 3s linear infinite;
+}
+.scaleBannerImg {
+  animation: scaleBannerImg 3s linear infinite;
+}
